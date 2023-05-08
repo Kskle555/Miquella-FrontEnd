@@ -20,14 +20,25 @@ import NIntro from './Components/News/NIntro.js/NIntro';
 import New from './Components/News/New/New';
 import CIntro from './Components/Contact/CIntro/CIntro';
 import CForm from './Components/Contact/CForm/CForm';
+import Dashboard from './Components/AdminPanel/AdminDashboard/Dashboard';
+import Summary from './Components/AdminPanel/Summary/Summary';
+import Charts from './Components/AdminPanel/AdminCharts/Charts';
+import RecentNews from './Components/AdminPanel/RecentNews/RecentNews';
+import AddNews from './Components/AdminPanel/AddNews/AddNews';
+import DeleteNews from './Components/AdminPanel/DeleteNews/DeleteNews';
+
+
 function App() {
   return (
    <Routes>
     <Route exact  path="/" element={<><Navbar/><Intro/><Trending/><Content/><Portfolio/><Projects/><Subscription/><Footer/> </>}/>
     <Route exact  path='/AboutUs' element={<><Navbar/><AIntro/><Work/><Section/><Team/><Subscription/><Footer/></>}/>
-    <Route exact   path='/Portfolio' element={<><Navbar/><Staticstics/><PSection/><PArticles/><PCustomer/><Subscription/><Footer/></>}/>
-    <Route exact   path='/News' element={<><Navbar/><NIntro/><New/><Subscription/><Footer/></>}/>
-    <Route exact   path='/Contact' element={<><Navbar/><CIntro/><CForm/><Subscription/><Footer/></>}/>
+    <Route exact  path='/Portfolio' element={<><Navbar/><Staticstics/><PSection/><PArticles/><PCustomer/><Subscription/><Footer/></>}/>
+    <Route exact  path='/News' element={<><Navbar/><NIntro/><New/><Subscription/><Footer/></>}/>
+    <Route exact  path='/Contact' element={<><Navbar/><CIntro/><CForm/><Subscription/><Footer/></>}/>
+    <Route exact  path='/Admin' element={<><Dashboard/><Summary/><Charts/><RecentNews/></>}/>
+    <Route exact  path='/Admin/AddNews' element={<><Dashboard/><AddNews/></>}/>
+    <Route exact  path='/Admin/DeleteNews' element={<><Dashboard/><DeleteNews/></>}/>
    </Routes>
   );
 }
